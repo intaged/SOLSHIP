@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Kraken body -->
+    <path d="M150 50 C180 50, 200 70, 200 100 C200 130, 180 150, 150 150 C120 150, 100 130, 100 100 C100 70, 120 50, 150 50" 
+          fill="none" 
+          stroke="rgba(255, 215, 0, 0.6)" 
+          stroke-width="2"/>
+    
+    <!-- Tentacles -->
+    <g stroke="rgba(255, 215, 0, 0.4)" fill="none" stroke-width="2">
+        <!-- Tentacle 1 -->
+        <path d="M130 140 Q120 170, 90 190 Q60 210, 40 250" />
+        <!-- Tentacle 2 -->
+        <path d="M140 140 Q140 180, 120 220 Q100 260, 80 280" />
+        <!-- Tentacle 3 -->
+        <path d="M150 140 Q160 180, 160 220 Q160 260, 150 280" />
+        <!-- Tentacle 4 -->
+        <path d="M160 140 Q180 170, 200 200 Q220 230, 240 250" />
+        <!-- Tentacle 5 -->
+        <path d="M170 140 Q200 160, 230 180 Q260 200, 280 210" />
+    </g>
+    
+    <!-- Eye -->
+    <circle cx="150" cy="90" r="5" fill="rgba(255, 215, 0, 0.8)"/>
+    <circle cx="150" cy="90" r="2" fill="rgba(26, 75, 119, 0.9)"/>
+    
+    <!-- Decorative swirls -->
+    <g stroke="rgba(255, 215, 0, 0.3)" fill="none" stroke-width="1">
+        <path d="M130 80 Q120 70, 130 60 Q140 50, 150 60" />
+        <path d="M170 80 Q180 70, 170 60 Q160 50, 150 60" />
+    </g>
+</svg> 

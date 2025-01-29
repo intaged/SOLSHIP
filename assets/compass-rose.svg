@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer circle -->
+    <circle cx="100" cy="100" r="98" fill="none" stroke="rgba(255, 215, 0, 0.8)" stroke-width="1"/>
+    
+    <!-- Inner circle -->
+    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255, 215, 0, 0.6)" stroke-width="1"/>
+    
+    <!-- Main compass points -->
+    <g stroke="rgba(255, 215, 0, 0.9)" stroke-width="2">
+        <!-- North -->
+        <line x1="100" y1="20" x2="100" y2="45" />
+        <text x="100" y="15" text-anchor="middle" fill="rgba(255, 215, 0, 0.9)" font-size="12">N</text>
+        <!-- South -->
+        <line x1="100" y1="155" x2="100" y2="180" />
+        <text x="100" y="195" text-anchor="middle" fill="rgba(255, 215, 0, 0.9)" font-size="12">S</text>
+        <!-- East -->
+        <line x1="155" y1="100" x2="180" y2="100" />
+        <text x="190" y="104" text-anchor="middle" fill="rgba(255, 215, 0, 0.9)" font-size="12">E</text>
+        <!-- West -->
+        <line x1="20" y1="100" x2="45" y2="100" />
+        <text x="10" y="104" text-anchor="middle" fill="rgba(255, 215, 0, 0.9)" font-size="12">W</text>
+    </g>
+    
+    <!-- Diagonal points -->
+    <g stroke="rgba(255, 215, 0, 0.6)" stroke-width="1">
+        <line x1="141" y1="59" x2="159" y2="41" />
+        <line x1="141" y1="141" x2="159" y2="159" />
+        <line x1="59" y1="141" x2="41" y2="159" />
+        <line x1="59" y1="59" x2="41" y2="41" />
+    </g>
+    
+    <!-- Center decoration -->
+    <circle cx="100" cy="100" r="5" fill="rgba(255, 215, 0, 0.9)"/>
+    <circle cx="100" cy="100" r="3" fill="rgba(26, 75, 119, 0.9)"/>
+</svg> 

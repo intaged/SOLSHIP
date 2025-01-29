@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Solana Trending Coins</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/loading.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Add this right after the opening body tag -->
+    <div class="background-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="animation-frame">
+                <div class="frame-corner top-left"></div>
+                <div class="frame-corner top-right"></div>
+                <div class="frame-corner bottom-left"></div>
+                <div class="frame-corner bottom-right"></div>
+                
+                <lottie-player
+                    src="Animation - 1737953586131.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 400px; height: 400px;"
+                    loop
+                    autoplay
+                ></lottie-player>
+                
+                <div class="loading-brand">
+                    <h1 class="loading-title">$SOLSHIP</h1>
+                    <div class="loading-subtitle">Navigate the Crypto Seas</div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-label">Setting Sail</div>
+                    <div class="loading-progress">
+                        <div class="progress-bar">
+                            <div class="progress-waves"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="loading-message">
+                    <i class="message-icon fas fa-anchor"></i>
+                    <span class="message-text">Charting the course to crypto treasures...</span>
+                </div>
+
+                <button class="enter-button">
+                    <span class="button-text">Begin the Voyage</span>
+                    <i class="button-icon fas fa-compass"></i>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="loading-compass"></div>
+        <div class="loading-waves"></div>
+        <div class="loading-stars">
+            <div class="star" style="--delay: 0s"></div>
+            <div class="star" style="--delay: 0.5s"></div>
+            <div class="star" style="--delay: 1s"></div>
+            <div class="star" style="--delay: 1.5s"></div>
+            <div class="star" style="--delay: 2s"></div>
+            <div class="star" style="--delay: 2.5s"></div>
+            <div class="star" style="--delay: 3s"></div>
+        </div>
+    </div>
+
+    <!-- Map Decorations -->
+    <div class="map-decorations">
+        <div class="compass-rose"></div>
+        <div class="sea-creature kraken"></div>
+        <div class="sea-creature mermaid"></div>
+        <div class="island small"></div>
+        <div class="island large"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="coinModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-coin-info">
+                    <img class="modal-coin-image" src="" alt="">
+                    <div class="modal-coin-title">
+                        <h2 class="modal-coin-name"></h2>
+                        <p class="modal-coin-symbol"></p>
+                    </div>
+                </div>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-stats-grid">
+                    <div class="modal-stat">
+                        <span class="stat-label">Market Cap</span>
+                        <span class="stat-value modal-market-cap"></span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="stat-label">24h Volume</span>
+                        <span class="stat-value modal-volume"></span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="stat-label">Market</span>
+                        <span class="stat-value modal-market-type"></span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="stat-label">Risk Level</span>
+                        <div class="modal-risk-meter">
+                            <div class="modal-risk-level"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-price-changes">
+                    <h3>Price Changes</h3>
+                    <div class="timeframes-grid">
+                        <div class="timeframe-stat">
+                            <span class="label">5m</span>
+                            <span class="value change-5m"></span>
+                            <i class="fas"></i>
+                        </div>
+                        <div class="timeframe-stat">
+                            <span class="label">1h</span>
+                            <span class="value change-1h"></span>
+                            <i class="fas"></i>
+                        </div>
+                        <div class="timeframe-stat">
+                            <span class="label">3h</span>
+                            <span class="value change-3h"></span>
+                            <i class="fas"></i>
+                        </div>
+                        <div class="timeframe-stat">
+                            <span class="label">6h</span>
+                            <span class="value change-6h"></span>
+                            <i class="fas"></i>
+                        </div>
+                        <div class="timeframe-stat">
+                            <span class="label">12h</span>
+                            <span class="value change-12h"></span>
+                            <i class="fas"></i>
+                        </div>
+                        <div class="timeframe-stat">
+                            <span class="label">24h</span>
+                            <span class="value change-24h"></span>
+                            <i class="fas"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-analysis">
+                    <div class="analysis-section momentum-analysis">
+                        <h3><i class="fas fa-chart-line"></i> Momentum Analysis</h3>
+                        <p class="momentum-text"></p>
+                        <div class="momentum-indicators">
+                            <div class="indicator buying-pressure">
+                                <span class="label">Buying Pressure</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill"></div>
+                                </div>
+                            </div>
+                            <div class="indicator trend-strength">
+                                <span class="label">Trend Strength</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section volume-analysis">
+                        <h3><i class="fas fa-chart-bar"></i> Volume Analysis</h3>
+                        <p class="volume-text"></p>
+                        <div class="volume-chart">
+                            <!-- Volume bars will be added dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="site-header">
+            <div class="brand">
+                <h1>$SOLSHIP</h1>
+                <div class="motion-container">
+                    <lottie-player
+                        src="Animation - 1737967174556 (1).json"
+                        background="transparent"
+                        speed="0.8"
+                        style="width: 70px; height: 40px; transform: scale(1.15);"
+                        loop
+                        autoplay
+                    ></lottie-player>
+                </div>
+            </div>
+            
+            <!-- Add social links here -->
+            <div class="social-links">
+                <a href="#" class="social-link" title="Follow us on X (formerly Twitter)" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="social-link" title="Join our Telegram" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+
+            <div class="timeframe-selector">
+                <button class="timeframe-btn" data-timeframe="5m">5M</button>
+                <button class="timeframe-btn" data-timeframe="1h">1H</button>
+                <button class="timeframe-btn" data-timeframe="3h">3H</button>
+                <button class="timeframe-btn" data-timeframe="6h">6H</button>
+                <button class="timeframe-btn active" data-timeframe="12h">12H</button>
+                <button class="timeframe-btn" data-timeframe="24h">24H</button>
+            </div>
+        </div>
+
+        <section id="trending-coins" class="trending-section">
+            <!-- Add map markers to section -->
+            <div class="map-marker top-left"></div>
+            <div class="map-marker bottom-right"></div>
+            
+            <div class="section-info">
+                <div class="timeframe-info">
+                    <div class="timeframe-label">Showing trends for:</div>
+                    <div class="current-timeframe">12 Hours</div>
+                </div>
+                <div class="last-updated">
+                    Last updated: <span id="update-time"></span>
+                </div>
+            </div>
+
+            <div class="coins-grid">
+                <!-- Example of updated coin card structure -->
+                <div class="coin-card">
+                    <div class="coin-header">
+                        <div class="coin-image-wrapper">
+                            <img src="path/to/coin-image.png" alt="Coin Name" class="coin-image">
+                        </div>
+                        <div class="coin-title">
+                            <h3>Coin Name</h3>
+                            <div class="coin-symbol">COIN</div>
+                        </div>
+                    </div>
+                    <div class="coin-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Market Cap</span>
+                            <span class="stat-value">$26.0M</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">24h</span>
+                            <span class="stat-value positive">
+                                <i class="fas fa-caret-up"></i>
+                                11332.7%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="view-analytics">
+                        <span>View Analytics</span>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <!-- Coins will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>$SOLSHIP</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Follow us on X (formerly Twitter)" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Join our Telegram" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#" title="About Us">About</a>
+                <a href="#" title="Terms of Service">Terms</a>
+                <a href="#" title="Privacy Policy">Privacy</a>
+                <a href="#" title="Contact Us">Contact</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>Data provided by Solana Tracker API • <span id="current-year"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <!-- Add the Lottie player script before the closing body tag -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Add Lottie library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const player = document.querySelector('lottie-player');
+            player.addEventListener('error', function(error) {
+                console.error('Lottie animation error:', error);
+            });
+            player.addEventListener('ready', function() {
+                console.log('Lottie animation loaded successfully');
+            });
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html> 

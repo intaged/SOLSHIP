@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+    <!-- Island base -->
+    <path d="M30 100 Q75 80, 120 100 L110 110 Q75 90, 40 110 Z" 
+          fill="none" 
+          stroke="rgba(255, 215, 0, 0.5)" 
+          stroke-width="2"/>
+    
+    <!-- Palm tree trunk -->
+    <path d="M75 90 Q73 80, 75 70" 
+          fill="none" 
+          stroke="rgba(255, 215, 0, 0.6)" 
+          stroke-width="2"/>
+    
+    <!-- Palm leaves -->
+    <g stroke="rgba(255, 215, 0, 0.4)" fill="none" stroke-width="1">
+        <path d="M75 70 Q60 65, 55 55" />
+        <path d="M75 70 Q90 65, 95 55" />
+        <path d="M75 75 Q65 70, 50 65" />
+        <path d="M75 75 Q85 70, 100 65" />
+    </g>
+    
+    <!-- Beach details -->
+    <g stroke="rgba(255, 215, 0, 0.3)" fill="none" stroke-width="1">
+        <path d="M45 105 Q50 103, 55 105" />
+        <path d="M85 105 Q90 103, 95 105" />
+        <path d="M65 95 Q70 93, 75 95" />
+    </g>
+</svg> 
